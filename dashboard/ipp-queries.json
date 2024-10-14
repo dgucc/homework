@@ -1,0 +1,135 @@
+[
+   {
+   "Overview Name": "Inkohiering",
+   "Sample Link": "taxi/param1/inkohiering/param2",
+   "Param1": "YYYY",
+   "Param2": "YYYYMMDD",
+   "Param3": ""
+   },
+   {
+   "Overview Name": "ProcessRun",
+   "Sample Link": "taxi/param1/processrun/param2",
+   "Param1": "YYYY",
+   "Param2": "YYYYMMDD",
+   "Param3": ""
+   },
+   {
+   "Overview Name": "Process Detail",
+   "Sample Link": "taxi/param1/processdetail/param2",
+   "Param1": "YYYY",
+   "Param2": "PROCESS ID",
+   "Param3": ""
+   },
+   {
+   "Overview Name": "Dossier",
+   "Sample Link": "taxi/param1/dossier/param2",
+   "Param1": "YYYY",
+   "Param2": "NATIONALNR",
+   "Param3": ""
+   },
+   {
+   "Overview Name": "Dossier Split",
+   "Sample Link": "taxi/param1/dossiersplit/param2",
+   "Param1": "YYYY",
+   "Param2": "NATIONALNR",
+   "Param3": ""
+   },
+   {
+   "Overview Name": "Dossier History",
+   "Sample Link": "taxi/param1/dossierhist/param2",
+   "Param1": "YYYY",
+   "Param2": "NATIONALNR",
+   "Param3": ""
+   },
+   {
+   "Overview Name": "Dossier Ipcal Value",
+   "Sample Link": "taxi/param1/calcrecvalues/param2",
+   "Param1": "YYYY",
+   "Param2": "NATIONALNR",
+   "Param3": ""
+   },
+   {
+   "Overview Name": "Virtual Printer by Uuid",
+   "Sample Link": "taxi/param1/vpbyuuid/param2",
+   "Param1": "YYYY",
+   "Param2": "UUID",
+   "Param3": ""
+   },
+   {
+   "Overview Name": "Virtual Printer by NationalNr",
+   "Sample Link": "taxi/param1/vpbynationalnr/param2",
+   "Param1": "YYYY",
+   "Param2": "NATIONALNR",
+   "Param3": ""
+   },
+   {
+   "Overview Name": "Ebox Generation",
+   "Sample Link": "taxi/param1/ebox/param2",
+   "Param1": "YYYY",
+   "Param2": "INKOHIERING ID",
+   "Param3": ""
+   },
+   {
+   "Overview Name": "Grensarbeiders",
+   "Sample Link": "taxi/param1/grensarbeiders",
+   "Param1": "YYYY",
+   "Param2": "",
+   "Param3": ""
+   },
+   {
+   "Overview Name": "Grensarbeiders V2",
+   "Sample Link": "taxi/param1/v2grensarbeiders/param2/param3",
+   "Param1": "YYYY",
+   "Param2": "YYYYMMDD",
+   "Param3": "YYYYMMDD"
+   },
+   {
+   "Overview Name": "SendLetter Doc Run Inventories",
+   "Sample Link": "taxi/param1/sendletterdocruninventories/param2",
+   "Param1": "YYYY",
+   "Param2": "INKOHIERING ID",
+   "Param3": ""
+   },
+   {
+   "Overview Name": "SendLetter Doc Interval Inventories",
+   "Sample Link": "taxi/param1/sendletterdocintervalinventories/param2/param3",
+   "Param1": "YYYY",
+   "Param2": "YYYYMMDD",
+   "Param3": ""
+   },
+   {
+   "Overview Name": "SendLetter Doc Run By Status Count",
+   "Sample Link": "taxi/param1/sendletterdocrunbystatuscount/param2",
+   "Param1": "YYYY",
+   "Param2": "INKOHIERING ID",
+   "Param3": ""
+   },
+   {
+   "Overview Name": "SendLetter Doc From Date By Status Count",
+   "Sample Link": "taxi/sendLetterDocFromDateByStatusCount/param1/param2",
+   "Param1": "YYYY",
+   "Param2": "YYYYMMDD",
+   "Param3": ""
+   },
+   {
+   "Overview Name": "SendLetter Doc From Date Status Count",
+   "Sample Link": "taxi/sendLetterDocFromDateStatusCount/param1/param2/param3",
+   "Param1": "YYYY",
+   "Param2": "YYYYMMDD",
+   "Param3": "DOC_STATUS"
+   },
+   {
+   "Overview Name": "SendLetter Doc Interval By Status Count",
+   "Sample Link": "taxi/param1/sendletterdocintervalbystatuscount/param2/param3",
+   "Param1": "YYYY",
+   "Param2": "YYYYMMDD",
+   "Param3": "YYYYMMDD"
+   },
+   {
+   "Overview Name": "TbDocuments Detail",
+   "Sample Link": "taxi/tbdocumentsdetail/param1",
+   "Param1": "TBDOCUMENTS ID",
+   "Param2": "",
+   "Param3": ""
+   }
+   ]
