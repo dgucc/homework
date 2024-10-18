@@ -1,5 +1,0 @@
-https://fontawesome.com/v4/icons/
-
-<link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-<i class="fa fa-file-pdf-o" aria-hidden="true"></i>
