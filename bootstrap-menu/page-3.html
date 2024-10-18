@@ -1,0 +1,11 @@
+
+<div>
+  <h1>Page 3</h1>  
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, velit ab dicta deleniti accusamus dolores suscipit nesciunt rem harum eum sit ut eveniet qui neque id cum molestiae pariatur odit?</p>
+</div>
+
+<script>
+  // $("#log").html("page=" + new URLSearchParams("?page=page-3.html").get("page"));
+  $("#log").html("page=" + new URL("http://127.0.0.1:3002/simple/index.html?page=page-3.html").searchParams.get("page"));
+
+</script>

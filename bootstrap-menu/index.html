@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="jquery-3.7.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+  
+    <h3>Bootstrap menu : nav-pills</h3>
+
+    <nav>
+
+        <ul class="nav nav-pills" >
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="index.html?page=page-1.html">Menu 1</a></li>
+          <li><a href="index.html?page=page-2.html">Menu 2</a></li>
+          <li><a href="index.html?page=page-3.html">Menu 3</a></li>
+        </ul>
+        <div id="log" class="bg-warning py-5">
+          
+        </div>
+
+      </nav>
+      
+    <div id="main-content">
+      <h1>Home Page</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ducimus facere iusto aspernatur facilis doloremque numquam non, repellendus, modi, praesentium corrupti fugiat blanditiis nam incidunt ipsa pariatur tenetur deleniti in?</p>
+    </div>
+    
+    
+  
+  
+</div>
+
+  <script>
+
+    $(document).ready(function () {
+      
+      $(".nav-pills li a").click(function (e) {
+        e.preventDefault();
+        // toggle active menu
+        $(".active").removeClass('active');
+        e.target.closest("li").classList.add("active");
+        
+        // load html content into div
+        if (e.target.href) {          
+          
+          if (e.target.href.includes("#")) {
+            window.location.reload();
+          } else {
+            // isolate target page with URLSearch params
+            let targetUrl=new URL(e.target.href);
+            let targetPage = new URLSearchParams(targetUrl.search).get("page");            
+            $("#log").html("page="+targetPage);  
+            $("#main-content").load(targetPage);
+          }
+        }
+
+      });
+
+
+
+
+    });
+  </script>
+
+</body>
+
+</html>
