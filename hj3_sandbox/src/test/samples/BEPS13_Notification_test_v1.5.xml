@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Declaration275CBCNOT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://beps13.minfin.fgov.be/notification/v1.51"
+	xsi:schemaLocation="http://beps13.minfin.fgov.be/notification/v1.51 126-beps13-notification-v1-51.xsd">
+	<Declarer>
+		<CompanyName>CompanyName</CompanyName>
+		<CompanyNumber>1234567890</CompanyNumber>
+		<AssessmentYear>2016</AssessmentYear>
+		<ReportingPeriod>
+			<StartDate>2014-01-01</StartDate>
+			<EndDate>2015-01-01</EndDate>
+		</ReportingPeriod>
+	</Declarer>
+
+	<UltimateParentCompany>
+<!-- 		<isUltimateParentCompany>true</isUltimateParentCompany> -->
+		<DistinctParentCompany>
+			<Name>Name</Name>
+			<CountryCode>BE</CountryCode>
+			<TIN>TIN</TIN>
+			<MotherAdres>
+				<Street>Street</Street>
+				<Number>Number</Number>
+				<PostalCode>PostalCode</PostalCode>
+				<City>City</City>
+			</MotherAdres>
+		</DistinctParentCompany>
+	</UltimateParentCompany>
+
+	<IsYourParentCompany>true</IsYourParentCompany>
+
+	<BelgGroupEntITC92>
+		<BelgGroupEnt>
+			<NoCBC>true</NoCBC>
+			<NoAcord>true</NoAcord>
+			<Negligence>true</Negligence>
+			<EUOther>false</EUOther>
+		</BelgGroupEnt>
+<!-- 		<Refusal>true</Refusal> -->
+	</BelgGroupEntITC92>
+
+	<MotherRep>
+<!-- 		<isReportingCompany>true</isReportingCompany> -->
+		<DistinctReportingCompany>
+			<ReportingEntityName>name</ReportingEntityName>
+			<ReportingEntityCountrycode>AI</ReportingEntityCountrycode>
+			<ReportingEntityTIN></ReportingEntityTIN>
+			<ReportingEntityAdress>
+				<Street>Street</Street>
+				<Number>Number</Number>
+				<PostalCode>PostalCode</PostalCode>
+				<City>City</City>
+			</ReportingEntityAdress>
+		</DistinctReportingCompany>
+	</MotherRep>
+
+</Declaration275CBCNOT>

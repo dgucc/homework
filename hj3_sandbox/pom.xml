@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+>
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.patrodyne.jvnet</groupId>
+	<artifactId>hj3-sandbox</artifactId>
+	<version>2.1.0</version>
+	<packaging>jar</packaging>
+	<name>HiSrc HyperJAXB Sample [BEPS13-CBCNotif]</name>
+
+	<properties>
+		<maven-antrun-plugin.version>3.1.0</maven-antrun-plugin.version>
+		<maven.compiler.release>17</maven.compiler.release>
+		<maven-min.version>3.8.4</maven-min.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<eclipselink.version>4.0.1</eclipselink.version>
+		<hisrc-basicjaxb.version>2.1.0</hisrc-basicjaxb.version>
+		<hisrc-hyperjaxb.version>2.1.0</hisrc-hyperjaxb.version>
+		<h2database.version>2.1.214</h2database.version>
+		<postgresql.version>42.6.0</postgresql.version>
+		<hibernate-series.version>5.6.15.Final</hibernate-series.version>
+		<jpa-api.version>3.1.0</jpa-api.version>
+		<slf4j.version>2.0.7</slf4j.version>
+	</properties>
+
+	<dependencies>
+		<!-- JPA Dependencies -->
+		<dependency>
+			<groupId>jakarta.persistence</groupId>
+			<artifactId>jakarta.persistence-api</artifactId>
+			<version>${jpa-api.version}</version>
+		</dependency>
+
+		<!-- javax.persistence.spi::No valid providers found -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core-jakarta</artifactId>
+			<version>5.6.9.Final</version>
+		</dependency>
+
+		<!-- HiSrc Runtime Dependencies -->
+		<dependency>
+			<groupId>org.patrodyne.jvnet</groupId>
+			<artifactId>hisrc-basicjaxb-runtime</artifactId>
+			<version>${hisrc-basicjaxb.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.patrodyne.jvnet</groupId>
+			<artifactId>hisrc-hyperjaxb-ejb-runtime</artifactId>
+			<version>${hisrc-hyperjaxb.version}</version>
+		</dependency>
+
+		<!-- Database Dependencies -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${h2database.version}</version>
+		</dependency>
+
+		<!-- SLF4J Implementation -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+
+		<!-- Test dependencies -->
+
+		<!-- HiSrc Roundtrip Dependencies -->
+		<dependency>
+			<groupId>org.patrodyne.jvnet</groupId>
+			<artifactId>hisrc-hyperjaxb-ejb-roundtrip</artifactId>
+			<version>${hisrc-hyperjaxb.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<defaultGoal>package</defaultGoal>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.11.0</version>
+				<configuration>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.hibernate</groupId>
+							<artifactId>hibernate-jpamodelgen-jakarta</artifactId>
+							<version>${hibernate-series.version}</version>
+						</path>
+					</annotationProcessorPaths>
+					<!-- In Eclipse, Enable: Preferences / Maven / Annotation Processing / Auto-configure JDT APT. -->
+					<generatedSourcesDirectory>${project.build.directory}/generated-sources/apt</generatedSourcesDirectory>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.12.1</version>
+			</plugin>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M8</version>
+				<configuration>
+					<argLine>${env.JVM_SYS_ARGS}</argLine>
+					<systemPropertiesFile>${basedir}/src/main/resources/jvmsystem.properties</systemPropertiesFile>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<mainClass>org.example.po.App</mainClass>
+					<cleanupDaemonThreads>false</cleanupDaemonThreads>
+				</configuration>
+			</plugin>
+			<!-- mvn hisrc-hyperjaxb:help -Ddetail=true -->
+			<!-- mvn hisrc-hyperjaxb:generate -->
+			<plugin>
+				<groupId>org.patrodyne.jvnet</groupId>
+				<artifactId>hisrc-hyperjaxb-maven-plugin</artifactId>
+				<version>${hisrc-hyperjaxb.version}</version>
+				<executions>
+					<execution>
+						<id>generate</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<extension>true</extension>
+							<!--
+							<roundtripTestClassName>org.example.po.RoundtripTest</roundtripTestClassName>
+							-->
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- Add Generated Code as extra source folder -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>3.2.0</version>
+				<executions>
+					 <execution>
+						  <id>add-source</id>
+						  <phase>generate-sources</phase>
+						  <goals>
+								<goal>add-source</goal>
+						  </goals>
+						  <configuration>
+								<sources>
+									 <source>target/generated-sources/xjc</source>
+								</sources>
+						  </configuration>
+					 </execution>
+				</executions>
+		  </plugin>
+		</plugins>
+	</build>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>3.4.2</version>
+			</plugin>
+			<plugin>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>3.0.0-M8</version>
+			</plugin>
+			<plugin>
+				<artifactId>maven-jxr-plugin</artifactId>
+				<version>3.3.0</version>
+			</plugin>
+		</plugins>
+	</reporting>
+
+	<profiles>
+		<!-- Hints:
+			mvn -Phibernate clean compile exec:java
+			Eclipse > Project > Properties > Maven > Acive Profiles: hibernate
+		-->
+		<profile>
+			<id>hibernate</id>
+			<dependencies>
+				<dependency>
+					<groupId>org.hibernate</groupId>
+					<artifactId>hibernate-core-jakarta</artifactId>
+					<version>${hibernate-series.version}</version>
+				</dependency>
+			</dependencies>
+		</profile>
+	</profiles>
+
+</project>
+<!-- vi:set tabstop=4 hardtabs=4 shiftwidth=4 noexpandtab:-->

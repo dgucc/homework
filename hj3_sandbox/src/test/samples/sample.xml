@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Declaration275CBCNOT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://beps13.minfin.fgov.be/notification/v1.51" xsi:schemaLocation="http://beps13.minfin.fgov.be/notification/v1.51 BEPS13_Notification_v1.51.xsd" >
+<Declarer>
+<CompanyName>Baloise Belgium NV</CompanyName>
+<CompanyNumber>0400048883</CompanyNumber>
+<AssessmentYear>2018</AssessmentYear>
+<ReportingPeriod>
+<StartDate>2017-01-01</StartDate>
+<EndDate>2017-12-31</EndDate>
+</ReportingPeriod>
+</Declarer>
+<UltimateParentCompany>
+<DistinctParentCompany>
+<Name>Baloise Holding AG</Name>
+<CountryCode>CH</CountryCode>
+<TIN>CHE - 102743957 MWST</TIN>
+<MotherAdres>
+<Street>Aeschengraben </Street>
+<Number>21</Number>
+<PostalCode>4002</PostalCode>
+<City>Basel</City>
+</MotherAdres>
+</DistinctParentCompany>
+</UltimateParentCompany>
+<MotherRep>
+<isReportingCompany>true</isReportingCompany>
+</MotherRep>
+</Declaration275CBCNOT>

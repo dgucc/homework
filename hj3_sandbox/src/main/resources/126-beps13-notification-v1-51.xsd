@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://beps13.minfin.fgov.be/notification/v1.51"  xmlns="http://beps13.minfin.fgov.be/notification/v1.51" 
+	xmlns:iso="urn:oecd:ties:isocbctypes:v1" elementFormDefault="qualified" version="1.51">
+	<xs:import namespace="urn:oecd:ties:isocbctypes:v1" schemaLocation="isocbctypes_v1.0.xsd"/>
+	<!-- Root element -->
+	<xs:element name="Declaration275CBCNOT" type="Declaration275CBCNOT_Type">
+
+
+
+
+
+
+	</xs:element>
+	<!-- complexTypes -->
+	<xs:complexType name="Declaration275CBCNOT_Type">
+
+
+
+
+
+
+		<xs:sequence>
+			<xs:element name="Declarer" type="Declarer_Type">
+
+
+
+
+
+
+			</xs:element>
+			<xs:element name="UltimateParentCompany" type="UltimateParentCompany_Type" minOccurs="0">
+
+
+
+
+
+
+			</xs:element>
+			<xs:element name="IsYourParentCompany" type="BooleanTrue_Type" minOccurs="0">
+
+
+
+
+
+
+			</xs:element>
+			<xs:element name="BelgGroupEntITC92" type="BelgGroupEntITC92_Type" minOccurs="0">
+
+
+
+
+
+
+			</xs:element>
+			<xs:element name="MotherRep" type="MotherRep_Type" minOccurs="0">
+
+
+
+
+
+
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Declarer_Type">
+
+
+
+
+
+
+		<xs:sequence>
+			<xs:element name="CompanyName" type="CompanyName_Type">
+
+
+
+
+
+
+			</xs:element>
+			<xs:element name="CompanyNumber" type="CompanyNumber_Type">
+
+
+
+
+
+
+			</xs:element>
+			<xs:element name="AssessmentYear" type="AssessmentYear_Type">
+
+
+
+
+
+
+			</xs:element>
+			<xs:element name="ReportingPeriod" type="ReportingPeriod_Type">
+
+
+
+
+
+
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ReportingPeriod_Type">
+
+
+
+
+
+
+		<xs:sequence>
+			<xs:element name="StartDate" type="StartDate_Type">
+
+
+
+
+
+
+			</xs:element>
+			<xs:element name="EndDate" type="EndDate_Type">
+
+
+
+
+
+
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UltimateParentCompany_Type">
+
+
+
+
+
+
+		<xs:choice>
+			<xs:element name="isUltimateParentCompany" type="BooleanTrue_Type">
+
+
+
+
+
+
+			</xs:element>
+			<xs:element name="DistinctParentCompany" type="DistinctParentCompany_Type">
+
+
+
+
+
+
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="DistinctParentCompany_Type">
+
+
+
+
+
+
+		<xs:sequence>
+			<xs:element name="Name" type="CompanyName_Type">
+
+
+
+
+
+
+			</xs:element>
+			<xs:element name="CountryCode" type="iso:CountryCode_Type">
+
+
+
+
+
+
+			</xs:element>
+			<xs:element name="TIN" type="TIN_Type">
+
+
+
+
+
+
+			</xs:element>
+			<xs:element name="MotherAdres" type="Address_Type">
+
+
+
+
+
+
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Address_Type">
+
+
+
+
+
+
+		<xs:sequence>
+			<xs:element name="Street" type="Street_Type">
+
+
+
+
+
+
+			</xs:element>
+			<xs:element name="Number" type="Number_Type">
+
+
+
+
+
+
+			</xs:element>
+			<xs:element name="PostalCode" type="PostCode_Type">
+
+
+
+
+
+
+			</xs:element>
+			<xs:element name="City" type="City_Type">
+
+
+
+
+
+
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BelgGroupEntITC92_Type">
+
+
+
+
+
+
+		<xs:choice>
+			<xs:element name="BelgGroupEnt" type="BelgGroupEnt_Type">
+
+
+
+
+
+
+			</xs:element>
+			<xs:element name="Refusal" type="BooleanTrue_Type">
+
+
+
+
+
+
+			</xs:element>				
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="BelgGroupEnt_Type">
+
+
+
+
+
+
+			<xs:sequence>
+				<xs:element name="NoCBC" type="BooleanNotEmpty_Type">
+
+
+
+
+
+
+				</xs:element>
+				<xs:element name="NoAcord" type="BooleanNotEmpty_Type">
+
+
+
+
+
+
+				</xs:element>
+				<xs:element name="Negligence" type="BooleanNotEmpty_Type">
+
+
+
+
+
+
+				</xs:element>
+				<xs:element name="EUOther" type="BooleanNotEmpty_Type">
+
+
+
+
+
+
+				</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MotherRep_Type">
+
+
+
+
+
+
+		<xs:choice>
+			<xs:element name="isReportingCompany" type="BooleanTrue_Type">
+
+
+
+
+
+
+			</xs:element>
+			<xs:element name="DistinctReportingCompany" type="DistinctReportingCompany_Type">
+
+
+
+
+
+
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="DistinctReportingCompany_Type">
+
+
+
+
+
+
+		<xs:sequence>
+			<xs:element name="ReportingEntityName" type="CompanyName_Type">
+
+
+
+
+
+
+			</xs:element>
+			<xs:element name="ReportingEntityCountrycode" type="iso:CountryCode_Type">
+
+
+
+
+
+
+			</xs:element>
+			<xs:element name="ReportingEntityTIN" type="TIN_Type">
+
+
+
+
+
+
+			</xs:element>
+			<xs:element name="ReportingEntityAdress" type="Address_Type">
+
+
+
+
+
+
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- simpleTypes -->
+	<xs:simpleType name="CompanyNumber_Type">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:pattern value="[0-9]{10}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="AssessmentYear_Type">
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="[0-9]{4}"/>
+			<xs:minInclusive value="2016"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="StartDate_Type">
+		<xs:restriction base="xs:date">
+			<xs:minInclusive value="2014-01-01"/>
+			<xs:maxInclusive value="2049-12-31"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="EndDate_Type">
+		<xs:restriction base="xs:date">
+			<xs:minInclusive value="2014-01-01"/>
+			<xs:maxInclusive value="2049-12-31"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="CompanyName_Type">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="256"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TIN_Type">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="64"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Street_Type">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="64"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Number_Type">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="20"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PostCode_Type">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="10"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="City_Type">
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="64"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="BooleanTrue_Type">
+		<xs:restriction base="xs:boolean">
+			<xs:pattern value="true|1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="BooleanNotEmpty_Type">
+		<xs:restriction base="xs:boolean">
+			<xs:pattern value=".+"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
