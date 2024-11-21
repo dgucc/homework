@@ -1,6 +1,6 @@
-[20/11/2024 mer.]
+# HYPERJAXB3 
 
-# Working version with src/main/resoures/126-beps13-notification-v1-51.xsd + src/test/samples  
+## Working version with src/main/resoures/126-beps13-notification-v1-51.xsd + src/test/samples  
 **Execute**  
 
 `$ mvn -Phibernate clean compile exec:java`  
@@ -38,9 +38,9 @@ entityManagerFactory = Persistence.createEntityManagerFactory("be.fgov.minfin.be
 
 ---
 
-# Fixes
+## Fixes
 
-## javax.persistence.spi::No valid providers found
+### javax.persistence.spi::No valid providers found
 
 ```xml
 <dependency>
