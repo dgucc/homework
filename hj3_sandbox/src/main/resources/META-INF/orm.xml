@@ -6,7 +6,7 @@
 >
 	<persistence-unit-metadata>
 		<persistence-unit-defaults>
-			<schema>beps13</schema>
+			<schema>PUBLIC</schema>
 		</persistence-unit-defaults>
 	</persistence-unit-metadata>
 </entity-mappings>

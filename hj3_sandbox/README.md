@@ -1,11 +1,13 @@
-# HYPERJAXB3 
+[20/11/2024 mer.]
 
-## Working version with src/main/resoures/126-beps13-notification-v1-51.xsd + src/test/samples  
+# Working version with src/main/resoures/126-beps13-notification-v1-51.xsd + src/test/samples  
 **Execute**  
 
+`$ mvn clean compile exec:java`  
 `$ mvn -Phibernate clean compile exec:java`  
 
 Output :  
+>[...]
 >CompanyNumber : 1234567890  
 >CountryCodes :CompanyName  
 >test.getId() : 1  
@@ -38,9 +40,9 @@ entityManagerFactory = Persistence.createEntityManagerFactory("be.fgov.minfin.be
 
 ---
 
-## Fixes
+# Fixes
 
-### javax.persistence.spi::No valid providers found
+## javax.persistence.spi::No valid providers found
 
 ```xml
 <dependency>

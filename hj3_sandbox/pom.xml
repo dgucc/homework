@@ -60,6 +60,12 @@
 			<artifactId>h2</artifactId>
 			<version>${h2database.version}</version>
 		</dependency>
+		<!-- HSQLDB -->
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>2.7.3</version>
+		</dependency>
 
 		<!-- SLF4J Implementation -->
 		<dependency>
@@ -114,7 +120,7 @@
 				<artifactId>exec-maven-plugin</artifactId>
 				<version>3.1.0</version>
 				<configuration>
-					<mainClass>org.example.po.App</mainClass>
+					<mainClass>minfin.App</mainClass>
 					<cleanupDaemonThreads>false</cleanupDaemonThreads>
 				</configuration>
 			</plugin>
@@ -133,7 +139,7 @@
 						<configuration>
 							<extension>true</extension>
 							<!--
-							<roundtripTestClassName>org.example.po.RoundtripTest</roundtripTestClassName>
+							<roundtripTestClassName>minfin.RoundtripTest</roundtripTestClassName>
 							-->
 						</configuration>
 					</execution>
