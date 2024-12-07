@@ -43,22 +43,22 @@ to see the generated ID's (cf. attribute Hjid) :
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns2:Declaration275CBCNOT xmlns="http://beps13.minfin.fgov.be/notification/v1.51" xmlns:ns2="be.fgov.minfin.beps13.entity.notification.v1_51" Hjid="1">
-    <Declarer Hjid="1">
+<ns2:Declaration275CBCNOT xmlns="http://beps13.minfin.fgov.be/notification/v1.51" xmlns:ns2="be.fgov.minfin.beps13.entity.notification.v1_51" Id="1">
+    <Declarer Id="1">
         <CompanyName>CompanyName</CompanyName>
         <CompanyNumber>1234567890</CompanyNumber>
         <AssessmentYear>2016</AssessmentYear>
-        <ReportingPeriod Hjid="1">
+        <ReportingPeriod Id="1">
             <StartDate>2014-01-01</StartDate>
             <EndDate>2015-01-01</EndDate>
         </ReportingPeriod>
     </Declarer>
-    <UltimateParentCompany Hjid="1">
-        <DistinctParentCompany Hjid="1">
+    <UltimateParentCompany Id="1">
+        <DistinctParentCompany Id="1">
             <Name>Name</Name>
             <CountryCode>BE</CountryCode>
             <TIN>TIN</TIN>
-            <MotherAdres Hjid="2">
+            <MotherAdres Id="2">
                 <Street>Street</Street>
                 <Number>Number</Number>
                 <PostalCode>PostalCode</PostalCode>
@@ -67,20 +67,20 @@ to see the generated ID's (cf. attribute Hjid) :
         </DistinctParentCompany>
     </UltimateParentCompany>
     <IsYourParentCompany>true</IsYourParentCompany>
-    <BelgGroupEntITC92 Hjid="1">
-        <BelgGroupEnt Hjid="1">
+    <BelgGroupEntITC92 Id="1">
+        <BelgGroupEnt Id="1">
             <NoCBC>true</NoCBC>
             <NoAcord>true</NoAcord>
             <Negligence>true</Negligence>
             <EUOther>false</EUOther>
         </BelgGroupEnt>
     </BelgGroupEntITC92>
-    <MotherRep Hjid="1">
-        <DistinctReportingCompany Hjid="1">
+    <MotherRep Id="1">
+        <DistinctReportingCompany Id="1">
             <ReportingEntityName>name</ReportingEntityName>
             <ReportingEntityCountrycode>AI</ReportingEntityCountrycode>
             <ReportingEntityTIN></ReportingEntityTIN>
-            <ReportingEntityAdress Hjid="1">
+            <ReportingEntityAdress Id="1">
                 <Street>Street</Street>
                 <Number>Number</Number>
                 <PostalCode>PostalCode</PostalCode>

@@ -2,14 +2,14 @@ package minfin;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
 import javax.xml.namespace.QName;
 
+import be.fgov.minfin.beps13.notification.v1_51.Declaration275CBCNOTType;
+import be.fgov.minfin.beps13.notification.v1_51.ObjectFactory;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
@@ -18,9 +18,6 @@ import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
 import jakarta.xml.bind.Unmarshaller;
-
-import be.fgov.minfin.beps13.notification.v1.ObjectFactory;
-import be.fgov.minfin.beps13.notification.v1.Declaration275CBCNOTType;
 
 public class App {
    private static JAXBContext jaxbContext;
@@ -58,7 +55,7 @@ public class App {
          }
 
          entityManagerFactory = Persistence.createEntityManagerFactory(
-               "be.fgov.minfin.beps13.notification.v1:oecd.ties.isocbctypes.v1", persistenceProperties);
+               "be.fgov.minfin.beps13.notification.v1_51:oecd.ties.isocbctypes.v1", persistenceProperties);
 
          final EntityManager entityManager = entityManagerFactory.createEntityManager();
          entityManager.getTransaction().begin();

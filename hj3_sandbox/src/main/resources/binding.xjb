@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jaxb:bindings jaxb:version="3.0"
+	xmlns:jaxb="https://jakarta.ee/xml/ns/jaxb"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:hj="http://jvnet.org/hyperjaxb/jpa"
+	xmlns:orm="https://jakarta.ee/xml/ns/persistence/orm"
+	jaxb:extensionBindingPrefixes="hj orm"
+>
+
+	<!--  Global Bindings
+		* JPA section 2.1, entities must be top-level classes.
+		* JPA section 2.1, entities must implement the serializable interface.
+		* When processing a Microsoft WCF service WSDL, it is recommended that the
+		  generateElementProperty customization be set to 'false' in globalBindings.
+		* Hint: Increase EnumMemberSizeCap above 256 with typesafeEnumMaxMembers="512".
+	-->
+	<jaxb:globalBindings generateIsSetMethod="true" localScoping="toplevel">
+		<jaxb:serializable uid="20241120" />
+	</jaxb:globalBindings>
+
+	<!--  Schema Bindings -->
+	<jaxb:bindings schemaLocation="126-beps13-notification-v1-51.xsd" node="/xs:schema">
+
+		<hj:persistence>
+
+			<hj:default-generated-id name="Id">
+				<orm:generated-value strategy="IDENTITY" />
+			</hj:default-generated-id>
+
+			<hj:default-one-to-one fetch="EAGER" />
+			<hj:default-one-to-many fetch="EAGER" />
+			<hj:default-many-to-many fetch="LAZY" />
+			<hj:default-many-to-one merge="false" fetch="EAGER">
+				<orm:join-column />
+				<orm:cascade>
+					<orm:cascade-refresh />
+					<orm:cascade-persist />
+					<orm:cascade-merge />
+					<orm:cascade-detach />
+				</orm:cascade>
+			</hj:default-many-to-one>
+
+		</hj:persistence>
+
+
+		<jaxb:schemaBindings>
+			<jaxb:package name="be.fgov.minfin.beps13.notification.v1_51"></jaxb:package>
+		</jaxb:schemaBindings>
+
+		<jaxb:bindings node="xs:complexType[@name='Declaration275CBCNOT_Type']">
+			<hj:entity>
+				<orm:table name="Declaration275CBCNOT" />
+			</hj:entity>
+		</jaxb:bindings>
+		<jaxb:bindings node="xs:complexType[@name='BelgGroupEntITC92_Type']">
+			<hj:entity>
+				<orm:table name="BelgGroupEntITC92" />
+			</hj:entity>
+		</jaxb:bindings>
+		<jaxb:bindings node="xs:complexType[@name='DistinctParentCompany_Type']">
+			<hj:entity>
+				<orm:table name="DistinctParentCompany" />
+			</hj:entity>
+		</jaxb:bindings>
+		<jaxb:bindings node="xs:complexType[@name='ReportingPeriod_Type']">
+			<hj:entity>
+				<orm:table name="ReportingPeriod" />
+			</hj:entity>
+		</jaxb:bindings>
+		<jaxb:bindings node="xs:complexType[@name='BelgGroupEnt_Type']">
+			<hj:entity>
+				<orm:table name="BelgGroupEnt" />
+			</hj:entity>
+		</jaxb:bindings>
+		<jaxb:bindings node="xs:complexType[@name='DistinctReportingCompany_Type']">
+			<hj:entity>
+				<orm:table name="DistinctReportingCompany" />
+			</hj:entity>
+		</jaxb:bindings>
+		<jaxb:bindings node="xs:complexType[@name='MotherRep_Type']">
+			<hj:entity>
+				<orm:table name="MotherRep" />
+			</hj:entity>
+		</jaxb:bindings>
+		<jaxb:bindings node="xs:complexType[@name='Address_Type']">
+			<hj:entity>
+				<orm:table name="Address" />
+			</hj:entity>
+		</jaxb:bindings>
+		<jaxb:bindings node="xs:complexType[@name='UltimateParentCompany_Type']">
+			<hj:entity>
+				<orm:table name="UltimateParentCompany" />
+			</hj:entity>
+		</jaxb:bindings>
+		<jaxb:bindings node="xs:complexType[@name='Declarer_Type']">
+			<hj:entity>
+				<orm:table name="Declarer" />
+			</hj:entity>
+		</jaxb:bindings>
+
+
+	</jaxb:bindings>
+
+</jaxb:bindings>
+<!-- vi:set tabstop=4 hardtabs=4 shiftwidth=4 noexpandtab:-->
