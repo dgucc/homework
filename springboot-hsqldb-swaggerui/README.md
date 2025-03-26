@@ -1,19 +1,12 @@
 # demo : Périodes VA - Rest Service
 
-Exemple de service rest sous :  
 - Springboot
 - Java 17
 - hsqldb
-- swagger-ui
 
-Utilisation d'hsqldb en local  
-Annotations pour documenter le swagger-ui généré sur base du code
+$ mvn17 clean install
+$ mvn17 spring-boot:run
 
-Run application :   
-`$ mvn17 clean install`  
-`$ mvn17 spring-boot:run`  
-
-Exemple avec curl  
 ```json
 curl --silent 'http://localhost:8080/va/periods/' -H 'Content-Type: application/json' -d '{
   "taxYearStartDate": "2023-10-01",
