@@ -8,6 +8,12 @@
 `$ mvn17 clean install`  
 `$ mvn17 spring-boot:run`  
 
+## Swagger-UI
+http://localhost:8080/swagger-ui/index.html  
+
+![Swagger-UI](https://github.com/dgucc/homework/blob/main/springboot-hsqldb-swaggerui/Swagger-UI.png)  
+
+
 ## Test du service rest avec curl
 
 ```bash
