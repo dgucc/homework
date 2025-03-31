@@ -47,7 +47,7 @@ public class VAPeriodService {
 
 
         // For each Payment quey the database
-        request.getPayments().forEach(payment -> {            
+        request.getPayments().forEach(payment -> {
             logger.info(
                 "[" + this.getClass().getName() + " request] taxYear:" + taxYear + ",taxYearType:" + taxYearType + ",balanceDate:" + request.getBalanceDate() + ",amount:" + payment.getAmount() + ",paymentDate:" + payment.getPaymentDate());;
             
@@ -62,10 +62,10 @@ public class VAPeriodService {
     
                 logger.info("[" + this.getClass().getName() + " response] amount:" + payment.getAmount() + ",paymentDate:" + payment.getPaymentDate() + ",vaPeriod:" + vaPeriod.getVaPeriod() + ",vaMaxDate:" + vaPeriod.getVaMaxDate());
                 
-            response.getVaPeriods().add(vaPeriod);            
+                response.getVaPeriods().add(vaPeriod);                                   
             }
         });
-                    
+
 
         return response;
     }
@@ -108,4 +108,6 @@ public class VAPeriodService {
                 taxYearStartDate.plusYears(1).isEqual(balanceDate.plusDays(1));
         return result;
     }
+
+
 }

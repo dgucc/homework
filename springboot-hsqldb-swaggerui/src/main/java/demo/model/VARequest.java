@@ -28,7 +28,7 @@ public class VARequest {
     @Schema(description = "Is the first activity of the company?", required = true, example = "false")
     @NotNull(message="isFirstActivity cannot be null")
     private Boolean isFirstActivity;
-
+    
     @Schema(description = "List of payments", required = true)
     @Valid
     private List<Payment> payments;

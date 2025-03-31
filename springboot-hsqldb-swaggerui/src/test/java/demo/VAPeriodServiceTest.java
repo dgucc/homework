@@ -49,11 +49,11 @@ public class VAPeriodServiceTest {
         boolean isFirstActivity = true;
         boolean isNotFirstActivity = false;
 
-        // 12 mois et pas 1re activité -> NORM
+        // 12 mois et pas 1re activitÃ© -> NORM
         assertEquals(VAPeriodService.isTaxYearAtLeastOneYear(LocalDate.parse("2023-06-12"), LocalDate.parse("2024-11-30")) || isNotFirstActivity ? "NORM" : "SPEC", "NORM");
-        // 2 mois mais 1re activité -> NORM
+        // 2 mois mais 1re activitÃ© -> NORM
         assertEquals(VAPeriodService.isTaxYearAtLeastOneYear(LocalDate.parse("2023-10-15"), LocalDate.parse("2023-12-31")) || isFirstActivity ? "NORM" : "SPEC", "NORM");
-        // 2 mois et pas 1re activité -> SPEC
+        // 2 mois et pas 1re activitÃ© -> SPEC
         assertEquals(VAPeriodService.isTaxYearAtLeastOneYear(LocalDate.parse("2023-10-15"), LocalDate.parse("2023-12-31")) || isNotFirstActivity ? "NORM" : "SPEC", "SPEC");
     }
 }
