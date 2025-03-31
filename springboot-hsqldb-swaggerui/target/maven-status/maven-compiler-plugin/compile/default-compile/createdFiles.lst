@@ -1,0 +1,14 @@
+demo\model\entity\VAPeriod.class
+demo\model\VARequest.class
+demo\repository\VAPeriodRepository.class
+demo\controller\VAPeriodController.class
+demo\controller\GlobalExceptionHandler.class
+demo\model\entity\VAPeriodId.class
+demo\utils\VAPeriodTest.class
+demo\model\Payment.class
+demo\SwaggerConfig.class
+demo\model\VAResponse.class
+demo\Application.class
+demo\service\VAPeriodService.class
+demo\controller\CustomBadRequestException.class
+demo\model\VAPeriodDetail.class

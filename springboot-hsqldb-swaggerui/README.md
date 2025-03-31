@@ -251,11 +251,11 @@ curl --silent 'http://localhost:8080/va/periods/' -H 'Content-Type: application/
   "isFirstActivity": true,
   "payments": [
     {
-      "amount": -4500,
+      "amount": -666,
       "paymentDate": "2024-03-01"
     },
     {
-      "amount": 666,
+      "amount": 4500,
       "paymentDate": "2024-10-11"
     }
   ] 
