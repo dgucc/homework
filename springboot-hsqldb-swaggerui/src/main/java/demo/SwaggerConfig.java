@@ -11,7 +11,6 @@ import springfox.documentation.spring.web.plugins.Docket;
 
 
 @Configuration
-// @EnableOpenApi
 public class SwaggerConfig {
 
    @Bean

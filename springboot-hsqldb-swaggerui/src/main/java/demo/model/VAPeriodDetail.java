@@ -2,11 +2,13 @@ package demo.model;
 
 import java.math.BigDecimal;
 import java.sql.Date;
+import java.util.List;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Transient;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -38,5 +40,9 @@ public class VAPeriodDetail{
    @Schema(description = "Identified type (normal of special) of tax year [for test purpose]", required = true, example = "NORM")
    @Column(name="TYPE")
    private String taxYearType;
+
+   @Schema(description = "Validation messages", required = false, example = "")
+   @Transient
+   private List<String> messages;
 }
 
