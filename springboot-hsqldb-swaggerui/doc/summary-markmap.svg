@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="mindmap" class="markmap mindmap"><style>.markmap {
+  --markmap-max-width: 9999px;
+  --markmap-a-color: #0097e6;
+  --markmap-a-hover-color: #00a8ff;
+  --markmap-code-bg: #f0f0f0;
+  --markmap-code-color: #555;
+  --markmap-highlight-bg: #ffeaa7;
+  --markmap-table-border: 1px solid currentColor;
+  --markmap-font: 300 16px/20px sans-serif;
+  --markmap-circle-open-bg: #fff;
+  --markmap-text-color: #333;
+  --markmap-highlight-node-bg: #ff02;
+
+  font: var(--markmap-font);
+  color: var(--markmap-text-color);
+}
+
+  .markmap-link {
+    fill: none;
+  }
+
+  .markmap-node &gt; circle {
+      cursor: pointer;
+    }
+
+  .markmap-foreign {
+    display: inline-block;
+  }
+
+  .markmap-foreign p {
+      margin: 0;
+    }
+
+  .markmap-foreign a {
+      color: var(--markmap-a-color);
+    }
+
+  .markmap-foreign a:hover {
+        color: var(--markmap-a-hover-color);
+      }
+
+  .markmap-foreign code {
+      padding: 0.25em;
+      font-size: calc(1em - 2px);
+      color: var(--markmap-code-color);
+      background-color: var(--markmap-code-bg);
+      border-radius: 2px;
+    }
+
+  .markmap-foreign pre {
+      margin: 0;
+    }
+
+  .markmap-foreign pre &gt; code {
+        display: block;
+      }
+
+  .markmap-foreign del {
+      text-decoration: line-through;
+    }
+
+  .markmap-foreign em {
+      font-style: italic;
+    }
+
+  .markmap-foreign strong {
+      font-weight: bold;
+    }
+
+  .markmap-foreign mark {
+      background: var(--markmap-highlight-bg);
+    }
+
+  .markmap-foreign table,
+    .markmap-foreign th,
+    .markmap-foreign td {
+      border-collapse: collapse;
+      border: var(--markmap-table-border);
+    }
+
+  .markmap-foreign img {
+      display: inline-block;
+    }
+
+  .markmap-foreign svg {
+      fill: currentColor;
+    }
+
+  .markmap-foreign &gt; div {
+      width: var(--markmap-max-width);
+      text-align: left;
+    }
+
+  .markmap-foreign &gt; div &gt; div {
+        display: inline-block;
+      }
+
+  .markmap-highlight rect {
+    fill: var(--markmap-highlight-node-bg);
+  }
+
+.markmap-dark .markmap {
+  --markmap-code-bg: #1a1b26;
+  --markmap-code-color: #ddd;
+  --markmap-circle-open-bg: #444;
+  --markmap-text-color: #eee;
+}
+</style><g transform="translate(18.355262756347656,348.75083103716764) scale(0.41992774517833287)"><path class="markmap-link" data-depth="5" data-path="1.2.3.4.5" d="M1265,-35.078C1305,-35.078,1305,-61.219,1345,-61.219" stroke-width="1.09375" stroke="rgb(148, 103, 189)"/><path class="markmap-link" data-depth="5" data-path="1.2.3.4.6" d="M1265,-35.078C1305,-35.078,1305,-35.125,1345,-35.125" stroke-width="1.09375" stroke="rgb(140, 86, 75)"/><path class="markmap-link" data-depth="5" data-path="1.2.3.4.7" d="M1265,-35.078C1305,-35.078,1305,-9.031,1345,-9.031" stroke-width="1.09375" stroke="rgb(227, 119, 194)"/><path class="markmap-link" data-depth="4" data-path="1.2.3.4" d="M839,-34.984C879,-34.984,879,-35.078,919,-35.078" stroke-width="1.1875" stroke="rgb(214, 39, 40)"/><path class="markmap-link" data-depth="3" data-path="1.2.3" d="M632,-19.203C672,-19.203,672,-34.984,712,-34.984" stroke-width="1.375" stroke="rgb(44, 160, 44)"/><path class="markmap-link" data-depth="3" data-path="1.2.8" d="M632,-19.203C672,-19.203,672,-3.797,712,-3.797" stroke-width="1.375" stroke="rgb(127, 127, 127)"/><path class="markmap-link" data-depth="5" data-path="1.9.11.12.13" d="M1246,53.859C1286,53.859,1286,27.719,1326,27.719" stroke-width="1.09375" stroke="rgb(44, 160, 44)"/><path class="markmap-link" data-depth="5" data-path="1.9.11.12.14" d="M1246,53.859C1286,53.859,1286,53.813,1326,53.813" stroke-width="1.09375" stroke="rgb(214, 39, 40)"/><path class="markmap-link" data-depth="5" data-path="1.9.11.12.15" d="M1246,53.859C1286,53.859,1286,79.906,1326,79.906" stroke-width="1.09375" stroke="rgb(148, 103, 189)"/><path class="markmap-link" data-depth="4" data-path="1.9.11.12" d="M826,53.953C866,53.953,866,53.859,906,53.859" stroke-width="1.1875" stroke="rgb(255, 127, 14)"/><path class="markmap-link" data-depth="3" data-path="1.9.10" d="M518,40.953C558,40.953,558,27.578,598,27.578" stroke-width="1.375" stroke="rgb(23, 190, 207)"/><path class="markmap-link" data-depth="3" data-path="1.9.11" d="M518,40.953C558,40.953,558,53.953,598,53.953" stroke-width="1.375" stroke="rgb(31, 119, 180)"/><path class="markmap-link" data-depth="2" data-path="1.2" d="M194,11.25C234,11.25,234,-19.203,274,-19.203" stroke-width="1.75" stroke="rgb(255, 127, 14)"/><path class="markmap-link" data-depth="2" data-path="1.9" d="M194,11.25C234,11.25,234,40.953,274,40.953" stroke-width="1.75" stroke="rgb(188, 189, 34)"/><g class="markmap-highlight"/><g data-depth="5" data-path="1.2.3.4.5" class="markmap-node" transform="translate(1345, -81.765625)"><line stroke="#9467bd" stroke-width="1.09375" x1="-1" x2="252" y1="20.546875" y2="20.546875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="234" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">YEAR_BILAN=YEAR(Date bilan)</div></div></foreignObject></g><g data-depth="5" data-path="1.2.3.4.6" class="markmap-node" transform="translate(1345, -55.671875)"><line stroke="#8c564b" stroke-width="1.09375" x1="-1" x2="283" y1="20.546875" y2="20.546875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="265" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">MONTH_BILAN=MONTH(Date bilan)</div></div></foreignObject></g><g data-depth="5" data-path="1.2.3.4.7" class="markmap-node" transform="translate(1345, -29.578125)"><line stroke="#e377c2" stroke-width="1.09375" x1="-1" x2="258" y1="20.546875" y2="20.546875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="240" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Min(VA_DATES &gt; Date paiement)</div></div></foreignObject></g><g data-depth="4" data-path="1.2.3.4" class="markmap-node" transform="translate(919, -55.671875)"><line stroke="#d62728" stroke-width="1.1875" x1="-1" x2="348" y1="20.59375" y2="20.59375"/><circle stroke-width="1.5" r="6" stroke="#d62728" fill="var(--markmap-circle-open-bg)" cx="346" cy="20.59375"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="330" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">VA_PERIOD [ANNEE=taxYear, TYPE=NORM]</div></div></foreignObject></g><g data-depth="3" data-path="1.2.3" class="markmap-node" transform="translate(712, -55.671875)"><line stroke="#2ca02c" stroke-width="1.375" x1="-1" x2="129" y1="20.6875" y2="20.6875"/><circle stroke-width="1.5" r="6" stroke="#2ca02c" fill="var(--markmap-circle-open-bg)" cx="127" cy="20.6875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="111" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">[Date bilan] : ok</div></div></foreignObject></g><g data-depth="3" data-path="1.2.8" class="markmap-node" transform="translate(712, -24.484375)"><line stroke="#7f7f7f" stroke-width="1.375" x1="-1" x2="175" y1="20.6875" y2="20.6875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="157" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">[Date bilan fictive] : [x]</div></div></foreignObject></g><g data-depth="2" data-path="1.2" class="markmap-node" transform="translate(274, -40.078125)"><line stroke="#ff7f0e" stroke-width="1.75" x1="-1" x2="360" y1="20.875" y2="20.875"/><circle stroke-width="1.5" r="6" stroke="#ff7f0e" fill="var(--markmap-circle-open-bg)" cx="358" cy="20.875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="342" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Exercie normal : [au moins 1 an] ou [1re activité]</div></div></foreignObject></g><g data-depth="3" data-path="1.9.10" class="markmap-node" transform="translate(598, 6.890625)"><line stroke="#17becf" stroke-width="1.375" x1="-1" x2="129" y1="20.6875" y2="20.6875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="111" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">[Date bilan] : [x]</div></div></foreignObject></g><g data-depth="5" data-path="1.9.11.12.13" class="markmap-node" transform="translate(1326, 7.171875)"><line stroke="#2ca02c" stroke-width="1.09375" x1="-1" x2="306" y1="20.546875" y2="20.546875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="288" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">YEAR_BILAN = YEAR(Date bilan fictive)</div></div></foreignObject></g><g data-depth="5" data-path="1.9.11.12.14" class="markmap-node" transform="translate(1326, 33.265625)"><line stroke="#d62728" stroke-width="1.09375" x1="-1" x2="337" y1="20.546875" y2="20.546875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="319" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">MONTH_BILAN = MONTH(Date bilan fictive)</div></div></foreignObject></g><g data-depth="5" data-path="1.9.11.12.15" class="markmap-node" transform="translate(1326, 59.359375)"><line stroke="#9467bd" stroke-width="1.09375" x1="-1" x2="258" y1="20.546875" y2="20.546875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="240" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Min(VA_DATES &gt; Date paiement)</div></div></foreignObject></g><g data-depth="4" data-path="1.9.11.12" class="markmap-node" transform="translate(906, 33.265625)"><line stroke="#ff7f0e" stroke-width="1.1875" x1="-1" x2="342" y1="20.59375" y2="20.59375"/><circle stroke-width="1.5" r="6" stroke="#ff7f0e" fill="var(--markmap-circle-open-bg)" cx="340" cy="20.59375"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="324" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">VA_PERIOD [ANNEE=taxYear, TYPE=SPEC]</div></div></foreignObject></g><g data-depth="3" data-path="1.9.11" class="markmap-node" transform="translate(598, 33.265625)"><line stroke="#1f77b4" stroke-width="1.375" x1="-1" x2="230" y1="20.6875" y2="20.6875"/><circle stroke-width="1.5" r="6" stroke="#1f77b4" fill="var(--markmap-circle-open-bg)" cx="228" cy="20.6875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="212" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">[Date bilan fictive] : calculated</div></div></foreignObject></g><g data-depth="2" data-path="1.9" class="markmap-node" transform="translate(274, 20.078125)"><line stroke="#bcbd22" stroke-width="1.75" x1="-1" x2="246" y1="20.875" y2="20.875"/><circle stroke-width="1.5" r="6" stroke="#bcbd22" fill="var(--markmap-circle-open-bg)" cx="244" cy="20.875"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="228" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Exercice spécial : [moins d'1 an]</div></div></foreignObject></g><g data-depth="1" data-path="1" class="markmap-node" transform="translate(0, -10)"><line stroke="#1f77b4" stroke-width="2.5" x1="-1" x2="196" y1="21.25" y2="21.25"/><circle stroke-width="1.5" r="6" stroke="#1f77b4" fill="var(--markmap-circle-open-bg)" cx="194" cy="21.25"/><foreignObject class="markmap-foreign" x="8" y="0" style="opacity: 1;" width="178" height="20"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Déterminer la période VA</div></div></foreignObject></g></g></svg>
