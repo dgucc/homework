@@ -3,7 +3,7 @@
 
 
 > proxy workaround :  
-(venv)> pip install python-docx --proxy http://dgucciar@proxies.finbel.intra:8080
+(venv)> pip install python-docx --proxy http://userid:passwd@proxies.example.com:8080
 
 ```cmd
 (venv)> python -m pip install --upgrade pip
