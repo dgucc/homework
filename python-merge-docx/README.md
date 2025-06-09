@@ -16,6 +16,13 @@
 ## python to exe
 `(venv)> pyinstaller --onefile fusion_documents.py`
 
+## format datetime
+```python
+>>> from datetime import datetime
+>>> print(datetime.now().strftime("%Y%m%d_%H-%M-%S"))
+20250609_09-59-03
+```
+
 ---
 
 ## Notes
