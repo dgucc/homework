@@ -1,5 +1,8 @@
 # demo : Périodes VA - Rest Service
 
+REST service to define the relevant periods of  VA for a given payment
+
+
 - Springboot
 - Java 17
 - hsqldb
