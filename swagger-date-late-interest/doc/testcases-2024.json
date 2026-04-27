@@ -1,0 +1,83 @@
+[
+{ // Exemple 1 (C)
+"taxYear": 2024,
+"balanceDate": "2023-12-31",
+"sendingDate": "2025-07-11",
+"executionDate": "2025-07-10",
+"rate": 5000,
+"withNonStandardInterest": false,
+"dueDateOfInterest": "2025-07-01"
+},
+{ // Exemple 2 (B)
+"taxYear": 2024,
+"balanceDate": "2024-09-30",
+"sendingDate": "2025-11-11",
+"executionDate": "2025-11-10",
+"rate": 5000,
+"withNonStandardInterest": false,
+"dueDateOfInterest":"2025-10-01"
+},
+{ // Exemple 3 (A)
+"taxYear": 2024,
+"balanceDate": "2024-09-30",
+"sendingDate": "2025-08-11",
+"executionDate": "2025-08-10",
+"rate": 5000,
+"withNonStandardInterest": false,
+"dueDateOfInterest":"2025-11-01"
+},
+{ // Exemple 4 (A)
+"taxYear": 2024,
+"balanceDate": "2023-12-30",
+"sendingDate": "2025-02-06",
+"executionDate": "2025-02-05",
+"rate": 5000,
+"withNonStandardInterest": false,
+"dueDateOfInterest":"2025-01-01"
+},
+{ // Exemple 5 (A)
+"taxYear": 2024,
+"balanceDate": "2024-12-30",
+"sendingDate": "2025-12-11",
+"executionDate": "2025-12-10",
+"rate": 5000,
+"withNonStandardInterest": false,
+"dueDateOfInterest":"2025-03-01"
+},
+{ // Exemple 6 (A)
+"taxYear": 2024,
+"balanceDate": "2024-06-30",
+"sendingDate": "2025-05-11",
+"executionDate": "2025-05-10",
+"rate": 5000,
+"withNonStandardInterest": false,
+"dueDateOfInterest":"2025-08-01"
+}
+{ // Exemple 7 (C)
+"taxYear": 2024,
+"balanceDate": "2024-06-30",
+"sendingDate": "2025-01-01",
+"executionDate": "2025-12-31",
+"rate": 5000,
+"withNonStandardInterest": false,
+"dueDateOfInterest":"2025-07-01"
+}
+{ // Exemple 8 (C)
+"taxYear": 2024,
+"balanceDate": "2024-04-30",
+"sendingDate": "2025-08-02",
+"executionDate": "2025-08-01",
+"rate": 5000,
+"withNonStandardInterest": false,
+"dueDateOfInterest":"2025-07-01"
+}
+{ // Exemple 9 (A)
+"taxYear": 2024,
+"balanceDate": "2024-04-30",
+"sendingDate": "2025-03-26",
+"executionDate": "2025-03-25",
+"rate": 5000,
+"withNonStandardInterest": false,
+"dueDateOfInterest":"2025-06-01"
+}
+]
