@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.10/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.10/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"D&#xe9;terminer la p&#xe9;riode VA","children":[{"content":"Exercie normal : [au moins 1 an] ou [1re activit&#xe9;]","children":[{"content":"[Date bilan] : ok","children":[{"content":"VA_PERIOD [ANNEE=taxYear, TYPE=NORM]","children":[{"content":"YEAR_BILAN=YEAR(Date bilan)","children":[],"payload":{"tag":"h6","lines":"9,10"}},{"content":"MONTH_BILAN=MONTH(Date bilan)","children":[],"payload":{"tag":"h6","lines":"10,11"}},{"content":"Min(VA_DATES &gt; Date paiement)","children":[],"payload":{"tag":"h6","lines":"11,12"}}],"payload":{"tag":"h5","lines":"7,8"}}],"payload":{"tag":"h4","lines":"5,6"}},{"content":"[Date bilan fictive] : [x]","children":[],"payload":{"tag":"h4","lines":"14,15"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"Exercice sp&#xe9;cial : [moins d&apos;1 an]","children":[{"content":"[Date bilan] : [x]","children":[],"payload":{"tag":"h3","lines":"21,22"}},{"content":"[Date bilan fictive] : calculated","children":[{"content":"VA_PERIOD [ANNEE=taxYear, TYPE=SPEC]","children":[{"content":"YEAR_BILAN = YEAR(Date bilan fictive)","children":[],"payload":{"tag":"h5","lines":"26,27"}},{"content":"MONTH_BILAN = MONTH(Date bilan fictive)","children":[],"payload":{"tag":"h5","lines":"27,28"}},{"content":"Min(VA_DATES &gt; Date paiement)","children":[],"payload":{"tag":"h5","lines":"28,29"}}],"payload":{"tag":"h4","lines":"24,25"}}],"payload":{"tag":"h3","lines":"22,23"}}],"payload":{"tag":"h2","lines":"18,19"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>

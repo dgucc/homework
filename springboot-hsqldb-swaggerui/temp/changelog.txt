@@ -1,0 +1,31 @@
+$ git --no-pager log --all --decorate --graph --pretty="%C(blue)%h %C(yellow)%s %C(white)%ad" --date=short
+* 651266f housekeeping 2025-03-31
+* 4d239b6 Added doc/ markmap-summary 2025-03-31
+* 18fff3c Auto-redirect "/" to "/swagger-ui/index.html" 2025-03-31
+* 10c87fe Corrected exemple avec http 400 2025-03-28
+* c6200a7 Added logger on pre-validations 2025-03-28
+* a695281 Pre-validations on RestController -> HTTP 400 2025-03-28
+* 7bd6b4e Added unit test : testTaxYearType (NORM,SPEC) 2025-03-28
+* 57fbf57 prepare demo 2025-03-27
+| *   afed829 resolving conflict 2025-03-27
+| |\
+| |/
+|/|
+* | 28eac90 Pre-validation handler : HTTP 400 messages 2025-03-27
+| * 206723f Not working... 2025-03-27
+|/
+* 4346cce Post validations : ValidateResponse(VAPeriodDetail) 2025-03-27
+* fe44e31 Configured logger 2025-03-27
+* d652bf1 Added tags (springdoc-openapi-ui) to generate  swagger-ui documentation 2025-03-27
+* 40a32ed change boolean -> Boolean isFirstActivity 2025-03-27
+* 7bb4f67 Repositoriy : add missing cast( as date) in SQL 2025-03-26
+* 357057d Redirect root page to swagger-ui/index.html 2025-03-26
+* 0ac76e7 Documentations 2025-03-26
+* aa90c45 Refactor naming of classes 2025-03-26
+* 2f300d0 working with POST and list of payments 2025-03-26
+* 0a9b886 structured project 2025-03-26
+* f24eb5c getVAPeriod() : reworked query 2025-03-26
+* 59d11cf Added unit tests over fictiveBalanceDate, TaxYear spanning over 1 year 2025-03-26
+* 4d8e257 prevent hsqldb lock : ";hsqldb.lock_file=false" 2025-03-25
+* 48ecdd6 working version with springboot hsqldb 2025-03-25
+
