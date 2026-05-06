@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="us">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Welcome</title>
+</head>
+<body>
+   
+   <div id="content">
+
+      <h1>Welcome</h1>
+      
+      
+      <p><a href="http://localhost:8080/api/v1/stk/test/up/0479282740" target="_blank">Get Parents for 0479282740</a></p>
+      <p><a href="http://localhost:8080/api/v1/stk/test/down/0479282740" target="_blank">Get Children for 0479282740</a></p>
+      <p>
+         <button onclick="post()">Post</button>
+         <br>
+         <p>List of BCE : <span id="listOfBce">["0408661790", "0726908991", "0695982819"]</span></p>
+      </p>
+      <div>
+            <pre id="resultPlaceholder">               
+            </pre>
+            
+      </div>
+   </div>
+
+
+
+
+
+<script>
+function post() {
+   const list = JSON.parse(document.getElementById("listOfBce").textContent.trim());
+   console.log("List of BCE : " + JSON.stringify(list));
+
+   fetch("http://localhost:8080/api/v1/stk/test/down/all", {
+      method: "POST",
+      headers: {
+         "Content-Type": "application/json"
+      },
+      body: JSON.stringify(list)
+   })
+   .then(response => response.json())
+   .then(data => {
+      document.getElementById("resultPlaceholder").textContent = JSON.stringify(data, null, 2);
+   })
+   .catch(error => {
+      console.error("Erreur :", error);
+      alert("Erreur !");
+   });
+}
+</script>
+</body>
+</html>
