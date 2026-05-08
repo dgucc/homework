@@ -45,6 +45,9 @@ public class StakeholdingService {
         List<String> relatedCompanies = new ArrayList<String>();
         List<StakeholdingDto> relatedStakeholdings = new ArrayList<>();
 
+        // Add the initial BCE to the list
+        relatedCompanies.add(bce);
+
         // Ensure a viable starting point (to avoid dead end)
         parentsInitialList = getParentsForBce(bce);
         relatedCompanies.addAll(parentsInitialList);
@@ -53,10 +56,10 @@ public class StakeholdingService {
         relatedCompanies.addAll(childrenInitialList);
 
         // Start drills up and down
-        childrenFinalList = getchildrenForListOfBce(parentsInitialList);
+        childrenFinalList = getchildrenForListOfBce(relatedCompanies);
         relatedCompanies.addAll(childrenFinalList);
 
-        parentFinalList = getParentsForListOfBce(childrenInitialList);
+        parentFinalList = getParentsForListOfBce(relatedCompanies);
         relatedCompanies.addAll(parentFinalList);
 
         // Remove duplicates

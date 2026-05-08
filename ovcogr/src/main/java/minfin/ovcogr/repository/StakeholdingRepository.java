@@ -28,7 +28,7 @@ public interface StakeholdingRepository extends JpaRepository<Stakeholding, Inte
                     P.PARENTBCE,
                     P.CHILDBCE
                 FROM PUBLIC.PARTICIPATION AS P JOIN LINKS ON LINKS.PARENTBCE=P.CHILDBCE
-                WHERE LINKS.LEVEL+1 <  LEVEL + 4 --AND P.CHILDBCE IS NOT NULL
+                WHERE LINKS.LEVEL+1 <  LEVEL + 6 --AND P.CHILDBCE IS NOT NULL
             )
             SELECT DISTINCT PARENTBCE FROM LINKS            
             """,
@@ -49,7 +49,7 @@ public interface StakeholdingRepository extends JpaRepository<Stakeholding, Inte
                     P.PARENTBCE,
                     P.CHILDBCE
                 FROM PUBLIC.PARTICIPATION AS P JOIN LINKS ON LINKS.PARENTBCE=P.CHILDBCE
-                WHERE LINKS.LEVEL+1 <  LEVEL + 4 --AND P.CHILDBCE IS NOT NULL
+                WHERE LINKS.LEVEL+1 <  LEVEL + 6 --AND P.CHILDBCE IS NOT NULL
             )
             SELECT DISTINCT PARENTBCE FROM LINKS            
             """,
@@ -72,7 +72,7 @@ public interface StakeholdingRepository extends JpaRepository<Stakeholding, Inte
                     C.PARENTBCE,
                     C.CHILDBCE
                 FROM PUBLIC.PARTICIPATION AS C JOIN LINKS ON LINKS.CHILDBCE=C.PARENTBCE
-                WHERE LINKS.LEVEL-1 > -4 --AND C.PARENTBCE IS NOT NULL
+                WHERE LINKS.LEVEL-1 > -6 --AND C.PARENTBCE IS NOT NULL
             )
             SELECT DISTINCT CHILDBCE FROM LINKS 
             """,
@@ -95,7 +95,7 @@ public interface StakeholdingRepository extends JpaRepository<Stakeholding, Inte
                 C.PARENTBCE,
                 C.CHILDBCE
             FROM PUBLIC.PARTICIPATION AS C JOIN LINKS ON LINKS.CHILDBCE=C.PARENTBCE
-            WHERE LINKS.LEVEL-1 > -4 --AND C.PARENTBCE IS NOT NULL
+            WHERE LINKS.LEVEL-1 > -6 --AND C.PARENTBCE IS NOT NULL
         )
         SELECT DISTINCT CHILDBCE FROM LINKS 
         """,
@@ -130,7 +130,7 @@ public interface StakeholdingRepository extends JpaRepository<Stakeholding, Inte
             	C.DIRECT,
             	C.INDIRECT
             FROM PUBLIC.PARTICIPATION AS C JOIN LINKS ON LINKS.CHILDBCE=C.PARENTBCE
-            WHERE LINKS.LEVEL-1 > -4 
+            WHERE LINKS.LEVEL-1 > -6 
             )
             SELECT DISTINCT PARENTBCE,PARENTNAME,COUNTRY,CHILDBCE,CHILDNAME,ENDSTAKEHOLDING,DIRECT,INDIRECT FROM LINKS
     """,

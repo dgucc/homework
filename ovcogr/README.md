@@ -20,11 +20,38 @@ mvn spring-boot:run
 Examples :  
 
 ```sh
-curl --silent -X GET -L http://localhost:8080/api/v1/stk/0408661790 | jq
-curl --silent -X GET -L http://localhost:8080/api/v1/stk/0888044106 | jq
-curl --silent -X GET -L http://localhost:8080/api/v1/stk/0444745790 | jq
-curl --silent -X GET -L http://localhost:8080/api/v1/stk/0538668417 | jq
+# jq 'length' : 27
+curl --silent -X GET -L http://localhost:8080/api/v1/stk/0695982819 | jq 'length'
+# jq 'length' : 27
+curl --silent -X GET -L http://localhost:8080/api/v1/stk/0479282740 | jq 'length'
+
+# jq 'length' : 16
+$ curl --silent -X GET -L http://localhost:8080/api/v1/stk/0552729259 | jq 'length'
+# jq 'length' : 16
+$ curl --silent -X GET -L http://localhost:8080/api/v1/stk/0778676111 | jq 'length'
+
+# jq 'length' : 27
+curl --silent -X GET -L http://localhost:8080/api/v1/stk/0408661790 | jq 'length'
+# jq 'length' : 27
+curl --silent -X GET -L http://localhost:8080/api/v1/stk/0888044106 | jq 'length'
+# jq 'length' : 7
+curl --silent -X GET -L http://localhost:8080/api/v1/stk/0444745790 | jq 'length'
+
+# jq 'length' : 16
+curl --silent -X GET -L http://localhost:8080/api/v1/stk/0552729259 | jq 'length'
+# jq 'length' : 274
+curl --silent -X GET -L http://localhost:8080/api/v1/stk/0538668417 | jq 'length'
+
+
+# jq 'length' : 342
+curl --silent -X GET -L http://localhost:8080/api/v1/stk/0848096932 | jq 'length'
+# jq 'length' : 342
+curl --silent -X GET -L http://localhost:8080/api/v1/stk/0223944690 | jq 'length'
+
 ```
+
+
+---
 
 # Test List all descendants for a list of BCE
 `curl --silent -X POST -L http://localhost:8080/api/v1/stk/test/down/all -H 'content-type: application/json' --data '["0408661790", "0726908991", "0695982819"]' | jq` 
@@ -39,20 +66,20 @@ http://localhost:8080/api/v1/stk/0403091220
 [
   {
     "parentBce": "0408661790",
-    "parentName": "\"PARTENA - GUICHET D'ENTREPRISES - PARTENA - ONDERNEMINGSLOKET\"",
+    "parentName": "PARTENA - GUICHET D'ENTREPRISES - PARTENA - ONDERNEMINGSLOKET",
     "country": "BE",
     "childBce": "0479282740",
-    "childName": "\"PARTENA Business Solutions\"",
+    "childName": "PARTENA Business Solutions",
     "endStakeholding": "2023-12-31",
     "direct": 0.000,
     "indirect": 0.000
   },
   {
     "parentBce": "0423855851",
-    "parentName": "\"P - INVEST\"",
+    "parentName": "P - INVEST",
     "country": "BE",
     "childBce": "0428359225",
-    "childName": "\"EASYPAY\"",
+    "childName": "EASYPAY",
     "endStakeholding": "2023-12-31",
     "direct": 10.000,
     "indirect": null
