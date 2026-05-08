@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Visualisation JSON - Attests & Invoices</title>
+   <link rel="stylesheet" href="css/style.css" />
+   <script src="js/script.js"></script>
+
+</head>
+
+<body>
+   <h1>Visualisation JSON</h1>
+   <div class="muted">Fichier attendu : <code>./19720494004-0539969009.json</code></div>
+   <div id="error" class="error"></div>
+
+   <h2>Infos générales</h2>
+   <div id="summary" class="grid"></div>
+
+   <h2>EAttests</h2>
+   <div class="controls">
+      <label>Filtre année:
+         <select id="yearFilter">
+            <option value="">Toutes</option>
+         </select>
+      </label>
+   </div>
+   <div class="table-wrap">
+      <table>
+         <thead>
+            <tr>
+               <th>niyear</th>
+               <th>nimonth</th>
+               <th>niidx</th>
+               <th class="right">nitotalAmount</th>
+               <th class="right">nitotalCancelledAmount</th>
+               <th class="right">nitotalSupAmount</th>
+               <th class="right">nitotalSupCancelledAmount</th>
+            </tr>
+         </thead>
+         <tbody id="attestsBody"></tbody>
+      </table>
+   </div>
+
+
+   <h2>Invoice Notifications</h2>
+   <div class="table-wrap">
+      <table>
+         <thead>
+            <tr>
+               <th>idf</th>
+               <th>invoiceYear</th>
+               <th>invoiceMonth</th>
+               <th class="right">invoiceInformationsCount</th>
+            </tr>
+         </thead>
+         <tbody id="invoiceNotificationsBody"></tbody>
+      </table>
+   </div>
+
+   <h2>Payment Informations (flatten)</h2>
+   <div class="table-wrap">
+      <table>
+         <thead>
+            <tr>
+               <th>notifId</th>
+               <th>invoiceYear</th>
+               <th>invoiceMonth</th>
+               <th>infoId</th>
+               <th>paymentDate</th>
+               <th class="right">paymentAmount</th>
+            </tr>
+         </thead>
+
+         <tbody id="paymentsBody"></tbody>
+      </table>
+   </div>
+
+   <script>
+      init();
+   </script>
+
+</body>
+
+</html>

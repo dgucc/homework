@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "java",
+        "name": "Spring Boot - Run",
+        "request": "launch",
+        "mainClass": "minfin.sandbox.SandboxApplication",
+        "projectName": "sandbox",
+        "env":{
+          "SPRING_DATASOURCE_PASSWORD":"${input:db2secret}",
+        }
+      }
+    ],
+    "inputs": [
+      {
+        "type": "promptString",
+        "id": "db2secret",
+        "description": "DB2 SECRET",
+        "default": "db2secret",
+        "password": true,
+      }
+    ]
+  }

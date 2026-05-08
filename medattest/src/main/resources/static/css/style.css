@@ -1,0 +1,88 @@
+body {
+   font-family: Arial, sans-serif;
+   margin: 20px;
+   color: #222;
+}
+
+h1,
+h2 {
+   margin-bottom: 8px;
+}
+
+.muted {
+   color: #666;
+   font-size: 0.9rem;
+}
+
+.grid {
+   display: grid;
+   grid-template-columns: repeat(4, minmax(160px, 1fr));
+   gap: 10px;
+   margin: 12px 0 24px;
+}
+
+.card {
+   border: 1px solid #ddd;
+   border-radius: 8px;
+   padding: 10px;
+   background: #fafafa;
+}
+
+.card b {
+   display: block;
+   font-size: 0.85rem;
+   color: #555;
+   margin-bottom: 4px;
+}
+
+table {
+   width: 100%;
+   border-collapse: collapse;
+   margin: 8px 0 24px;
+   font-size: 13px;
+}
+
+th,
+td {
+   border: 1px solid #ddd;
+   padding: 6px 8px;
+   text-align: left;
+   vertical-align: top;
+}
+
+th {
+   background: #f2f2f2;
+   position: sticky;
+   top: 0;
+   z-index: 1;
+}
+
+.table-wrap {
+   max-height: 55vh;
+   overflow: auto;
+   border: 1px solid #ddd;
+   border-radius: 8px;
+}
+
+.right {
+   text-align: right;
+}
+
+.controls {
+   display: flex;
+   gap: 12px;
+   margin: 8px 0 12px;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+input,
+select {
+   padding: 4px 6px;
+}
+
+.error {
+   color: #b00020;
+   font-weight: bold;
+   margin-top: 10px;
+}
