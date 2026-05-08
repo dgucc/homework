@@ -1,7 +1,7 @@
 # Migrate ovcogr project API into Spring Boot
 
 - Java 17  
-- HSQLDB  
+- HSQLDB (recursive SQL)  
 - spring-boot 4.0.6
 
 
