@@ -2,7 +2,7 @@
 
 - Java 17  
 - HSQLDB  
-- 
+- spring-boot 4.0.6
 
 
 # Run the project
